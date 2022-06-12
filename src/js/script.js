@@ -61,5 +61,8 @@ crateCardsFromTechs(techs)
 
 
 function flipCard(){
-    this.classList.add("flip");
+    if(game.setCard(this.id)) {
+        
+        this.classList.add("flip");
+    }
 }
