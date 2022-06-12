@@ -1,5 +1,27 @@
 let game = {
 
+    lockMode: false,
+    firstCard:null,
+    secondCard:null,
+
+    setCard: function (id) {
+        let card = this.cards.filter(card=>card.id=== id)[0];
+        if(card.flipped || this.lockMode){
+            return false;
+        }
+
+        if(this.firstCard){
+            this.firstCard = card;
+            return true;
+        }
+        
+        else{
+            this.secondCard = card;
+            this.lockMode = true;
+            return true;
+        }
+    },
+
     techs: ['bootstrap',
         'css',
         'electron',
