@@ -80,5 +80,18 @@ body{
     display: grid;
     grid-template:1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr ;
     gap: 20px;
-    background-image: url(/src/images/);
+}
+
+
+@media(max-width:1000px) {
+    .card{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media(max-width:470px){
+    #gameBoard{
+        grid-template:1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr ;
+    }
 }
